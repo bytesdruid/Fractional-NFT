@@ -6,15 +6,15 @@ def approval():
     on_creation = Seq(
         [
             # g byteslice - asset name is Bloom Token
-            App.globalPut(Bytes("AssetName"), Bytes("Bloom Token")),
+            App.globalPut(Bytes("AssetName"), Bytes("Mandala Painting 1")),
             # g byteslice - unit name is BLT
-            App.globalPut(Bytes("UnitName"), Bytes("BLT")),
+            App.globalPut(Bytes("UnitName"), Bytes("MND1")),
             # g int - decimals
-            App.globalPut(Bytes("Decimals"), Int(2)),
+            App.globalPut(Bytes("Decimals"), Int(1)),
             # g Int - total supply 
-            App.globalPut(Bytes("Total"), Int(100000000)),
+            App.globalPut(Bytes("Total"), Int(10)),
             # g Int - reserve is total amount not sitting in local balance
-            App.globalPut(Bytes("GlobalReserve"), Int(100000000)),
+            App.globalPut(Bytes("GlobalReserve"), Int(10)),
             # approve sequence
             Return(Int(1)),
         ]
